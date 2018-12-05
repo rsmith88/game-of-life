@@ -1,8 +1,10 @@
 class Cell
-  def initialize()
+  def initialize(row, column)
     @live = true
+    @row = row
+    @column = column
   end
 
-  attr_reader :live
-  
+  attr_reader :live, :row, :column
+
 end
