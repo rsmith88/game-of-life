@@ -10,4 +10,9 @@ describe Neighbour do
     end
   end
 
+  describe '#hash' do
+    it 'includes hash of neighbouring cells' do
+      expect(subject.hash).to be_a(Hash)
+    end
+  end
 end
