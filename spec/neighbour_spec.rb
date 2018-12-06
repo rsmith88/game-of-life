@@ -10,13 +10,14 @@ describe Neighbour do
     end
   end
 
-  describe '#hash' do
+  describe '#list' do
     it 'includes hash of neighbouring cells' do
-      expect(subject.hash).to be_a(Hash)
+      expect(subject.list).to be_a(Array)
     end
 
     it 'includes the row and columns of neighbouring cells when given a cell' do
-      expect(subject.hash.first).to eq([1, 4])
+      p subject.list
+      expect(subject.list.first).to eq({1 => 2})
     end
 
   end
