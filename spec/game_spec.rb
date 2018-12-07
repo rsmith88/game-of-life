@@ -2,6 +2,7 @@ require 'game'
 
 describe Game do
   subject = Game.new(5, 5)
+  subject.create
 
   describe '#initialize' do
     it 'takes a number of rows and columns to construct game' do
@@ -12,16 +13,21 @@ describe Game do
 
   describe '#create' do
     it 'creates a game with rows and columns of cells' do
-      subject.create
       expect(subject.cells.length).to eq (25)
     end
   end
 
   describe '#tick' do
     it 'updates all cells in the game' do
-      subject.create
       subject.tick
       expect(subject.cells[0].live).to eq (false)
+    end
+  end
+
+  describe '#reset' do
+    it 'updates all cells in the game' do
+      subject.reset
+      expect(subject.cells[0].live).to eq(subject.cells[0].survive)
     end
   end
 

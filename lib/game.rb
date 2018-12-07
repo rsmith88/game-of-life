@@ -13,21 +13,25 @@ class Game
       @column.times do |column_number|
         cell = Cell.new(row_number, column_number)
         @cells.push(cell)
-        print "#{cell.row}"
       end
-      puts ""
     end
   end
 
   def tick
-    counter = 0
     @cells.each do |cell|
       cell.survive=(false)
+    end
+    print_game
+    reset
+  end
+
+  def print_game
+    counter = 0
+    @cells.each do |cell|
       (cell.survive) ? (print "X") : (print "O")
       counter += 1
-      puts "" if (counter % @row == 0)
+      puts "" if (counter % 5 == 0)
     end
-    reset
   end
 
   def reset
