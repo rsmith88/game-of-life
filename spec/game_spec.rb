@@ -17,4 +17,12 @@ describe Game do
     end
   end
 
+  describe '#tick' do
+    it 'updates all cells in the game' do
+      subject.create
+      subject.tick
+      expect(subject.cells[0].live).to eq (false)
+    end
+  end
+
 end
