@@ -16,7 +16,7 @@ describe Cell do
       expect(subject.column).to eq(3)
     end
 
-    it 'initializes a cell with next turn live as true' do
+    it 'initializes a cell with survive variable being true' do
       expect(subject.survive).to eq(true)
     end
 

@@ -16,7 +16,7 @@ describe Neighbour do
     end
 
     it 'includes the row and columns of neighbouring cells when given a cell' do
-      expect(subject.list.first).to eq({1 => 2})
+      expect(subject.list.first).to eq([1, 2])
     end
 
   end
