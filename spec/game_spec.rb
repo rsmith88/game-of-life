@@ -15,6 +15,13 @@ describe Game do
     end
   end
 
+  describe '#survive?' do
+    it 'returns false if a cell has more than 3 live neighbours' do
+      subject.reset
+      expect(subject.game_board.cells[0].live).to eq(subject.game_board.cells[0].survive)
+    end
+  end
+
   # describe '#tick' do
   #   it 'updates all cells in the game' do
   #     subject.tick
