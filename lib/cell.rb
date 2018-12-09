@@ -4,10 +4,10 @@ class Cell
     @survive = true
     @row = row
     @column = column
-    @neigbours = []
+    @neighbours = []
   end
 
-  attr_reader :live, :row, :column, :live, :survive
+  attr_reader :live, :survive, :row, :column, :neighbours
   attr_writer :live, :survive, :neighbours
 
 end
